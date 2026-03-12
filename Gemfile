@@ -45,6 +45,15 @@ gem "thruster", require: false
 # Add authorization to your Rails application [https://github.com/varvet/pundit]
 gem "pundit", "~> 2.2"
 
+# Pagination
+gem "pagy", "~> 9.0"
+
+# SEO meta tags
+gem "meta-tags", "~> 2.2"
+
+# Slug-based URLs
+gem "friendly_id", "~> 5.5"
+
 # Add user authentication to your Rails application [https://github.com/heartcombo/devise]
 gem "devise", "~> 5.0"
 gem "devise_invitable", "~> 2.0"
