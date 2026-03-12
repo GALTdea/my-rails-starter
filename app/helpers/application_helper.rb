@@ -2,6 +2,7 @@
 
 module ApplicationHelper
   include SettingsHelper
+  include Pagy::Frontend
 
   def render_flash_stream
     turbo_stream.update "flash", partial: "common/flash"

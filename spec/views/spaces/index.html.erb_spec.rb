@@ -9,7 +9,7 @@ RSpec.describe "spaces/index", type: :view do
       Space.create!(name: "Space 1", status: :active),
       Space.create!(name: "Space 2", status: :active)
     ]
-    assign(:spaces, Kaminari.paginate_array(@spaces).page(1))
+    assign(:spaces, @spaces)
   end
 
   it "renders a list of spaces" do
