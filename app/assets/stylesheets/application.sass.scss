@@ -1,0 +1,12 @@
+// Entry point for your Sass build
+@use "@tabler/core/scss/tabler";
+@use "@tabler/core/scss/tabler-vendors";
+@use "@tabler/core/scss/tabler-themes";
+
+.landing-navbar {
+    box-shadow: 0 0 0 0;
+}
+
+.landing-navbar.scrolled {
+    box-shadow: 5px -1px 12px -5px grey;
+}
