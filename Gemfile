@@ -45,9 +45,6 @@ gem "thruster", require: false
 # Add authorization to your Rails application [https://github.com/varvet/pundit]
 gem "pundit", "~> 2.2"
 
-# Add admin interface to your Rails application [https://github.com/sferik/rails_admin]
-gem "rails_admin", "~> 3.0"
-
 # Adds pagination to your Rails application [https://github.com/kaminari/kaminari]
 gem "kaminari"
 

@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  authenticate :user, ->(user) { user.admin? } do
-    mount RailsAdmin::Engine => "/admin", as: "rails_admin"
-  end
-
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: %i[edit update destroy]
 
