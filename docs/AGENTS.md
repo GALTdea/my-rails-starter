@@ -7,10 +7,10 @@ for new apps. Not a finished product — a maintained, evolving base.
 ## Current Status
 - [x] Base rails-tabler-starter running on Ruby 3.4.4 / Rails 8.1.2
 - [x] AI documentation layer created
-- [ ] rails_admin removed
-- [ ] kaminari replaced with pagy
+- [x] rails_admin removed
+- [x] kaminari replaced with pagy
 - [ ] Bootstrap/Tabler replaced with Tailwind + daisyUI
-- [ ] App module renamed from RailsTabler8
+- [x] App module renamed from RailsTabler8
 - [ ] friendly_id added
 - [ ] meta-tags added
 - [ ] .cursorrules completed
