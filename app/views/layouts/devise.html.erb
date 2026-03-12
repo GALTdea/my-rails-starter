@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html
-  data-bs-theme="<%= color_mode %>"
-  data-bs-theme-base="<%= theme_base %>"
-  data-bs-theme-font="<%= theme_font %>"
-  data-bs-theme-primary="<%= primary_color %>"
-  data-bs-theme-radius="<%= corner_radius %>"
-  >
+<html lang="en" data-theme="starter_light">
   <head>
-    <title><%= content_for(:title) || "Rails Tabler 8" %></title>
+    <title><%= content_for(:title) || "My Rails Starter" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= yield :head %>
-
-    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
-    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
     <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-  <%= render login_layout %>
+  <body class="min-h-screen bg-base-200 flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+      <!-- Logo / App name -->
+      <div class="text-center mb-8">
+        <%= link_to root_path, class: "text-2xl font-bold text-primary" do %>
+          My Rails Starter
+        <% end %>
+      </div>
+
+      <%= render "shared/flash" %>
+
+      <!-- Auth card -->
+      <div class="card bg-base-100 shadow-lg">
+        <div class="card-body">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+

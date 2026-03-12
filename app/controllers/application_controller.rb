@@ -9,11 +9,19 @@ class ApplicationController < ActionController::Base
   before_action :set_main_space, only: [ :landing ]
   before_action :redirect_signed_in_user, only: [ :landing ]
 
-  layout "plain", only: [ :landing ]
+  layout :determine_layout
 
   def landing; end
 
   private
+
+  def determine_layout
+    if user_signed_in?
+      "dashboard"
+    else
+      "application"
+    end
+  end
 
   def redirect_signed_in_user
     return unless user_signed_in?
