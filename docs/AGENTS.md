@@ -4,6 +4,19 @@
 Personal Ruby on Rails 8.1 starter template. Reused as the foundation 
 for new apps. Not a finished product — a maintained, evolving base.
 
+## Current Status
+- [x] Base rails-tabler-starter running on Ruby 3.4.4 / Rails 8.1.2
+- [x] AI documentation layer created
+- [ ] rails_admin removed
+- [ ] kaminari replaced with pagy
+- [ ] Bootstrap/Tabler replaced with Tailwind + daisyUI
+- [ ] App module renamed from RailsTabler8
+- [ ] friendly_id added
+- [ ] meta-tags added
+- [ ] .cursorrules completed
+
+Update this list as each step is completed.
+
 ## Read these files before making changes
 - docs/ARCHITECTURE.md — system design, models, request lifecycle
 - docs/CONVENTIONS.md — all coding and UI conventions
