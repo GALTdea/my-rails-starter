@@ -45,9 +45,6 @@ gem "thruster", require: false
 # Add authorization to your Rails application [https://github.com/varvet/pundit]
 gem "pundit", "~> 2.2"
 
-# Adds pagination to your Rails application [https://github.com/kaminari/kaminari]
-gem "kaminari"
-
 # Add user authentication to your Rails application [https://github.com/heartcombo/devise]
 gem "devise", "~> 5.0"
 gem "devise_invitable", "~> 2.0"
