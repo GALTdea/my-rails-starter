@@ -1,16 +1,25 @@
 # Setup
 
-## Requirements
+## First-time setup
 
-- **Ruby 4.0.1**
-- Bundler, Node (for Tailwind), SQLite (or PostgreSQL if you switch)
+### Prerequisites
+- Ruby 4.0.1 (rbenv or asdf recommended)
+- Bundler 2.x
+- Node.js + npm (for daisyUI)
+- SQLite3
 
-## Steps
+### Setup
 
-1. Clone the repo and `cd` into the project.
-2. Install Ruby 4.0.1 (e.g. `rbenv install 4.0.1` or your version manager).
-3. `bundle install`
-4. `bin/setup` (or run migrations and seeds manually)
-5. `bin/dev` to start the app
+  git clone <your-repo-url>
+  cd <app-name>
+  bundle install
+  npm install
+  bin/rails db:create db:migrate
+  bin/dev
 
-See `docs/AGENTS.md` for run commands and conventions.
+Visit http://localhost:3000
+
+### Verify
+
+  bundle exec rspec        # 80 examples, 0 failures
+  bundle exec rubocop      # 0 offenses

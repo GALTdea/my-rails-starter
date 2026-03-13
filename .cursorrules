@@ -1,5 +1,8 @@
 ## Cursor Rules (Condensed)
 
+# Template build history: docs/template/DECISIONS.md
+# App dev docs: docs/AGENTS.md, docs/CONVENTIONS.md
+
 - **Docs entry point**
   - Start at `docs/AGENTS.md` to find architecture, conventions, setup, and decisions.
   - Module-specific docs live in `docs/modules/` (multitenancy, billing, file_uploads, api).

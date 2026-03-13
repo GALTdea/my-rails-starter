@@ -60,9 +60,7 @@ every controller action.
 
 When unsure: read docs/CONVENTIONS.md before generating code.
 Full context: docs/AGENTS.md, docs/ARCHITECTURE.md
-
-
-
+```
 
 ## 2026-03-13 — Upgraded to Tailwind CSS 4 + daisyUI 5
 tailwindcss-rails 4.4.0, tailwindcss v4.2.0, daisyUI 5.5.19.
