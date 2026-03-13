@@ -60,3 +60,16 @@ every controller action.
 
 When unsure: read docs/CONVENTIONS.md before generating code.
 Full context: docs/AGENTS.md, docs/ARCHITECTURE.md
+
+
+
+
+## 2026-03-13 — Upgraded to Tailwind CSS 4 + daisyUI 5
+tailwindcss-rails 4.4.0, tailwindcss v4.2.0, daisyUI 5.5.19.
+Entry point moved from app/assets/stylesheets/application.tailwind.css
+to app/assets/tailwind/application.css (new v4 convention).
+Config moved from tailwind.config.js (deleted) into CSS directives:
+@import, @plugin, @theme, @source.
+daisyUI loaded via npm as @plugin "daisyui".
+daisyUI 5 has ~15 class renames from v4 — views updated on-demand
+as each view is rebuilt, not preemptively.
