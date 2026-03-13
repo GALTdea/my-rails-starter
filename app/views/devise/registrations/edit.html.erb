@@ -8,25 +8,25 @@
         <em>Currently waiting confirmation for: <%= resource.unconfirmed_email %></em>
       <% end %>
       <div class="input-group input-group-flat">
-        <%= f.email_field :email, class: "form-control", placeholder: "Enter email", disabled: true %>
+        <%= f.email_field :email, class: "input input-md w-full", placeholder: "Enter email", disabled: true %>
       </div>
     </div>
     <div class="mb-3">
       <label class="form-label">Current password</label>
       <div class="input-group input-group-flat">
-        <%= f.password_field :current_password, class: "form-control", placeholder: "Password", autofocus: true, autocomplete: "current-password" %>
+        <%= f.password_field :current_password, class: "input input-md w-full", placeholder: "Password", autofocus: true, autocomplete: "current-password" %>
       </div>
     </div>
     <div class="mb-3">
       <label class="form-label">New password</label>
       <div class="input-group input-group-flat">
-        <%= f.password_field :password, class: "form-control", placeholder: "Password", autocomplete: "new-password" %>
+        <%= f.password_field :password, class: "input input-md w-full", placeholder: "Password", autocomplete: "new-password" %>
       </div>
     </div>
     <div class="mb-3">
       <label class="form-label">Confirm new password</label>
       <div class="input-group input-group-flat">
-        <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password", autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, class: "input input-md w-full", placeholder: "Password", autocomplete: "new-password" %>
       </div>
     </div>
     <div class="form-footer">

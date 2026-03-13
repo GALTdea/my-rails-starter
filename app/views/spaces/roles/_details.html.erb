@@ -14,13 +14,13 @@
   <div class="form-group mb-3 row">
     <%= form.label :name, class: "form-label col-3 col-form-label" %>
     <div class="col-3">
-      <%= form.text_field :name, class:"form-control", ariaDescribedby:"NameHelp", placeholder: "Enter name" %>
+      <%= form.text_field :name, class:"input input-md w-full", ariaDescribedby:"NameHelp", placeholder: "Enter name" %>
     </div>
   </div>
   <div class="form-group mb-3 row">
     <%= form.label :value, class: "form-label col-3 col-form-label" %>
     <div class="col-3">
-      <%= form.text_field :value, class:"form-control", ariaDescribedby:"valueHelp", placeholder: "Enter value", disabled: role.persisted? %>
+      <%= form.text_field :value, class:"input input-md w-full", ariaDescribedby:"valueHelp", placeholder: "Enter value", disabled: role.persisted? %>
     </div>
   </div>
   <div class="mb-3">

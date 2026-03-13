@@ -12,10 +12,10 @@
           <div class="space-y-4">
             <% Rails.application.config.app_settings
                 .each do |key, schema| %>
-              <div class="form-control">
+              <fieldset class="fieldset">
                 <%= form.label key,
                   class: "label" do %>
-                  <span class="label-text font-medium capitalize">
+                  <span class="label font-medium capitalize">
                     <%= key.to_s.humanize %>
                   </span>
                 <% end %>
@@ -25,8 +25,8 @@
                   { selected:
                       @app_setting.settings[key] ||
                       schema['default'] },
-                  { class: "select select-bordered w-full" } %>
-              </div>
+                  { class: "select w-full" } %>
+              </fieldset>
             <% end %>
           </div>
 

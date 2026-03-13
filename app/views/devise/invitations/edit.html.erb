@@ -7,12 +7,12 @@
   <% if f.object.class.require_password_on_accepting %>
     <div class="mb-3">
       <%= f.label :password, class: "form-label" %>
-      <%= f.password_field :password, class: "form-control" %>
+      <%= f.password_field :password, class: "input input-md w-full" %>
     </div>
 
     <div class="mb-3">
       <%= f.label :password_confirmation, class: "form-label" %>
-      <%= f.password_field :password_confirmation, class: "form-control" %>
+      <%= f.password_field :password_confirmation, class: "input input-md w-full" %>
     </div>
   <% end %>
 

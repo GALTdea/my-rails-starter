@@ -4,7 +4,7 @@
     <h2 class="card-title text-center mb-4">Login to your account</h2>
     <div class="mb-3">
       <label class="form-label">Email address</label>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Enter email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input input-md w-full", placeholder: "Enter email" %>
     </div>
     <div class="mb-2">
       <label class="form-label">
@@ -14,7 +14,7 @@
         </span>
       </label>
       <div class="input-group input-group-flat">
-        <%= f.password_field :password, class: "form-control", placeholder:"Password", autocomplete:"off" %>
+        <%= f.password_field :password, class: "input input-md w-full", placeholder:"Password", autocomplete:"off" %>
       </div>
     </div>
     <div class="mb-2">

@@ -20,13 +20,13 @@
             <div class="form-group mb-3 row">
               <%= form.label :email, class: "form-label col-3 col-form-label" %>
               <div class="col">
-                <%= form.text_field :email, class:"form-control", ariaDescribedby:"emailHelp", placeholder: "Enter email" %>
+                <%= form.text_field :email, class:"input input-md w-full", ariaDescribedby:"emailHelp", placeholder: "Enter email" %>
               </div>
             </div>
             <div class="form-group mb-3 row">
               <%= form.label :role, class: "form-label col-3 col-form-label" %>
               <div class="col">
-                <%= form.select :role_id, @space_roles.map { |role| [role.name, role.id] }, {}, { class:"form-control", ariaDescribedby:"roleHelp" } %>
+                <%= form.select :role_id, @space_roles.map { |role| [role.name, role.id] }, {}, { class:"select select-md w-full", ariaDescribedby:"roleHelp" } %>
               </div>
             </div>
             <div class="form-footer">
