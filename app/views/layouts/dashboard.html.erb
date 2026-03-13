@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="starter_light">
   <head>
-    <title><%= content_for(:title) || "My Rails Starter" %></title>
+    <%= display_meta_tags(
+  site: "My Rails Starter",
+  title: "Dashboard",
+  separator: "·"
+) %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

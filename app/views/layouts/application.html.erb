@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="starter_light">
   <head>
-    <title><%= content_for(:title) || "My Rails Starter" %></title>
+    <%= display_meta_tags(
+  site: "My Rails Starter",
+  title: "Welcome",
+  description: "A clean Rails 8 starter template",
+  separator: "·"
+) %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>

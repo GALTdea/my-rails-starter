@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe "/spaces", type: :request do
   let(:user) { create(:user) }
 
-  before do
-    login_as user, scope: :user
-  end
+  before { sign_in user }
 
   describe "GET /index" do
     it "renders a successful response" do

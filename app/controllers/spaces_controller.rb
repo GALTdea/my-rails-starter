@@ -5,7 +5,8 @@ class SpacesController < ApplicationController
   before_action :check_multi_tenant_mode, only: %i[new index]
 
   def index
-    @spaces = current_user.spaces.includes(user_roles: :role, subscriptions: :plan).page params[:page]
+    collection = current_user.spaces.includes(user_roles: :role, subscriptions: :plan)
+    @pagy, @spaces = pagy(collection)
   end
 
   # GET /spaces/1

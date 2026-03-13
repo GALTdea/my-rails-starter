@@ -34,6 +34,9 @@
 #  invited_by_id          :bigint
 #
 class User < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   has_many :user_roles
   has_many :spaces, through: :user_roles
 

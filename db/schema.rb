@@ -10,12 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_21_095423) do
+ActiveRecord::Schema[8.1].define(version: 2026_03_13_004232) do
   create_table "app_settings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.json "settings", default: {}, null: false
     t.datetime "updated_at", null: false
     t.index ["settings"], name: "index_app_settings_on_settings"
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.datetime "created_at"
+    t.string "scope"
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
   create_table "plans", force: :cascade do |t|
@@ -85,11 +96,13 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_21_095423) do
     t.datetime "reset_password_sent_at"
     t.string "reset_password_token"
     t.string "session_token"
+    t.string "slug"
     t.integer "status", default: 0
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
   add_foreign_key "roles", "spaces"
