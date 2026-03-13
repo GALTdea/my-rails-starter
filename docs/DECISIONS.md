@@ -17,7 +17,20 @@ Tailwind-compatible, added unnecessary complexity to the asset pipeline.
 
 ## 2026-03-12 — Chose pagy over kaminari
 Reason: Faster, lighter, better daisyUI pagination component support.
-```
+
+## 2026-03-12 — Re-enabled Turbo Drive
+Turbo Drive was disabled in the original starter to prevent conflicts with Bootstrap/Tabler JS. Re-enabled after Bootstrap removal since daisyUI is CSS-only and has no Turbo conflicts.
+
+## 2026-03-12 — Chose 3 fixed layouts over 9 Bootstrap layout variants
+Original starter had 9 layout variants driven by AppSettings.interface_layout. Replaced with 3 purposeful layouts: application (marketing), dashboard (authenticated), devise (auth). Simpler, more AI-friendly, easier to maintain. Old layouts archived in app/views/body/_archive/.
+
+## 2026-03-12 — Removed interface_layout and login_layout from SettingsHelper
+These were Bootstrap/Tabler theming helpers. Kept multi_tenant_mode? and show_landing_page? as they are genuinely useful across apps.
+
+## 2026-03-12 — friendly_id reserved_words not configurable globally in v5.x
+FriendlyId 5.x does not support config.reserved_words= globally. Reserved words must be set per-model if needed. Global initializer kept as documentation only.
+
+---
 
 This file is invaluable six months later when you've forgotten why something is the way it is — and it's invaluable to AI agents that would otherwise make suggestions that contradict your deliberate choices.
 

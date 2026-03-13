@@ -4,18 +4,46 @@
 Personal Ruby on Rails 8.1 starter template. Reused as the foundation 
 for new apps. Not a finished product — a maintained, evolving base.
 
-## Current Status
+## Current Status — v1.0.0
+
+### Completed
 - [x] Base rails-tabler-starter running on Ruby 3.4.4 / Rails 8.1.2
 - [x] AI documentation layer created
 - [x] rails_admin removed
 - [x] kaminari replaced with pagy
-- [ ] Bootstrap/Tabler replaced with Tailwind + daisyUI
-- [x] App module renamed from RailsTabler8
-- [ ] friendly_id added
-- [ ] meta-tags added
-- [ ] .cursorrules completed
+      (pagy configured in controller, helper, initializer, pagination partial)
+- [x] Bootstrap/Tabler pipeline replaced with Tailwind CSS 3.3.2 + daisyUI 5.5.19
+- [x] App module renamed to MyRailsStarter
+- [x] friendly_id installed and configured
+      (slugs table migrated, User model updated)
+- [x] meta-tags installed and configured
+      (wired into all 3 layouts)
+- [x] 3 layouts rebuilt in Tailwind + daisyUI
+      (application, dashboard, devise)
+- [x] Shared partials created
+      (flash, user_menu, user_menu_compact, page_header, pagination)
+- [x] Devise views rebuilt in Tailwind + daisyUI
+- [x] Landing page rebuilt in Tailwind + daisyUI
+- [x] Setup/AppSettings view rebuilt
+- [x] Error pages rebuilt (404, 422, 500)
+- [x] Turbo Drive re-enabled
+- [x] Importmap cleaned (no Tabler/Bootstrap pins)
+- [x] RuboCop clean: 0 offenses
+- [x] RSpec passing: 80 examples, 0 failures
 
-Update this list as each step is completed.
+### Intentionally deferred (rebuild per app)
+- [ ] spaces/ views (Bootstrap, rebuild when needed)
+- [ ] users/ views (Bootstrap, rebuild when needed)
+- [ ] spaces/roles views
+- [ ] spaces/subscriptions views
+- [ ] Devise remaining views
+      (password reset, edit registration, etc.)
+
+### Optional modules (documented, not installed)
+- [ ] Multitenancy (docs/modules/multitenancy.md)
+- [ ] Billing (docs/modules/billing.md)
+- [ ] File uploads (docs/modules/file_uploads.md)
+- [ ] API layer (docs/modules/api.md)
 
 ## Read these files before making changes
 - docs/ARCHITECTURE.md — system design, models, request lifecycle
