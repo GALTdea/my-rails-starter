@@ -7,12 +7,12 @@ for new apps. Not a finished product — a maintained, evolving base.
 ## Current Status — v1.0.0
 
 ### Completed
-- [x] Base rails-tabler-starter running on Ruby 3.4.4 / Rails 8.1.2
+- [x] Base rails-tabler-starter running on Ruby 4.0.1 / Rails 8.1.2
 - [x] AI documentation layer created
 - [x] rails_admin removed
 - [x] kaminari replaced with pagy
       (pagy configured in controller, helper, initializer, pagination partial)
-- [x] Bootstrap/Tabler pipeline replaced with Tailwind CSS 3.3.2 + daisyUI 5.5.19
+- [x] Tailwind CSS 4.2.0 + daisyUI 5.5.19 (tailwindcss-rails 4.4.0, npm plugin)
 - [x] App module renamed to MyRailsStarter
 - [x] friendly_id installed and configured
       (slugs table migrated, User model updated)
@@ -53,9 +53,9 @@ for new apps. Not a finished product — a maintained, evolving base.
 - config/routes.rb — current route structure
 
 ## Tech stack
-- Ruby 3.4.4, Rails 8.1.2, SQLite (swap to PostgreSQL per app)
+- Ruby 4.0.1, Rails 8.1.2, SQLite (swap to PostgreSQL per app)
 - Hotwire (Turbo + Stimulus), importmap, propshaft
-- Tailwind CSS + daisyUI — no Bootstrap, no custom CSS
+- Tailwind CSS 4.2.0 + daisyUI 5.5.19 (loaded via npm as @plugin); config in app/assets/tailwind/application.css
 - Devise + devise_invitable — authentication
 - Pundit — authorization, one policy per resource
 - Solid Queue — background jobs, no Redis required

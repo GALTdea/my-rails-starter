@@ -65,3 +65,37 @@ Input pattern:
   </div>
 Select pattern: class="select select-bordered w-full"
 Submit: class="btn btn-primary"
+
+## daisyUI 5 Class Migration Reference
+
+When rebuilding deferred views (spaces/, users/) or writing new views, use daisyUI 5 class names. Reference table of breaking renames from v4:
+
+| Old (daisyUI 4)      | New (daisyUI 5)        | Notes                        |
+|----------------------|------------------------|------------------------------|
+| input-bordered       | (remove)               | Border is default in v5      |
+| select-bordered      | (remove)               | Border is default in v5      |
+| textarea-bordered    | (remove)               | Border is default in v5      |
+| file-input-bordered  | (remove)               | Border is default in v5      |
+| form-control         | fieldset               | Use fieldset+legend+label    |
+| label-text           | label                  | Standalone label element     |
+| label-text-alt       | label                  | Use flex justify-between     |
+| card-bordered       | card-border            | Renamed                      |
+| card-compact         | card-sm                | Renamed                      |
+| tabs-bordered        | tabs-border            | Renamed                      |
+| tabs-lifted          | tabs-lift              | Renamed                      |
+| tabs-boxed           | tabs-box               | Renamed                      |
+| btn-group            | join + join-item       | Use join component           |
+| input-group          | join + join-item       | Use join component           |
+| menu active          | menu-active            | Renamed modifier             |
+| menu disabled        | menu-disabled          | Renamed modifier             |
+| avatar online        | avatar-online          | Renamed modifier             |
+| table hover (class)  | hover:bg-base-300      | Use Tailwind utility instead |
+| btm-nav              | dock                   | Component renamed            |
+
+New form pattern in daisyUI 5:
+
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend">Section</legend>
+    <label class="label" for="field_id">Label</label>
+    <input id="field_id" class="input w-full" />
+  </fieldset>
