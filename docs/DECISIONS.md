@@ -1,5 +1,8 @@
 # Architecture Decision Log
 
+## 2026-03-12 — Upgraded to Ruby 4.0.1
+Upgraded from Ruby 3.4.4 to Ruby 4.0.1 for latest language features and security updates.
+
 ## 2026-03-12 — Chose Devise over authentication-zero
 Reason: rails-tabler-starter already had Devise fully integrated with 
 the Space/multitenancy model and role system. The integration cost of 
@@ -43,7 +46,7 @@ This lives at the project root, not in `docs/`. Cursor reads it automatically at
 This is a personal Ruby on Rails 8.1 starter template.
 Read docs/AGENTS.md before making any changes.
 
-Stack: Rails 8.1, Ruby 3.4.4, Hotwire, Tailwind CSS, daisyUI, 
+Stack: Rails 8.1, Ruby 4.0.1, Hotwire, Tailwind CSS, daisyUI, 
 Devise, Pundit, Solid Queue, SQLite, Kamal, RSpec
 
 NEVER generate: Bootstrap classes, Sidekiq, Redis, rails_admin, 
