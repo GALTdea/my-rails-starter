@@ -16,7 +16,9 @@ class ApplicationController < ActionController::Base
   private
 
   def determine_layout
-    if user_signed_in?
+    if devise_controller?
+      "devise"
+    elsif user_signed_in?
       "dashboard"
     else
       "application"
