@@ -1,32 +1,46 @@
-<div class="page page-center">
-  <div class="container container-tight py-4">
-    <div class="card card-md">
-      <div class="card-body">
-        <%= form_with(model: @app_setting, url: setup_path, method: :patch) do |form| %>
-          <%= form.fields_for :settings do |sf| %>
-            <% Rails.application.config.app_settings.each do |key, schema| %>
-              <div class="form-group mb-3 row">
-                <%= form.label key, class: "form-label col-6 col-form-label" %>
-                <div class="col">
-                  <%= sf.select key, 
-                      app_settings_values(key).map { |v| [v, v] }, 
-                      { selected: @app_setting.settings[key] || schema['default'] }, 
-                      { class: "form-select", aria_describedby: "statusHelp" } %>
-                </div>
+<div class="max-w-2xl mx-auto">
+  <%= render "shared/page_header",
+    title: "App Settings",
+    subtitle: "Configure application behaviour" %>
+
+  <div class="card bg-base-100 shadow-sm">
+    <div class="card-body">
+      <%= form_with(model: @app_setting,
+          url: setup_path, method: :patch) do |form| %>
+        <%= form.fields_for :settings do |sf| %>
+
+          <div class="space-y-4">
+            <% Rails.application.config.app_settings
+                .each do |key, schema| %>
+              <div class="form-control">
+                <%= form.label key,
+                  class: "label" do %>
+                  <span class="label-text font-medium capitalize">
+                    <%= key.to_s.humanize %>
+                  </span>
+                <% end %>
+                <%= sf.select key,
+                  app_settings_values(key)
+                    .map { |v| [v, v] },
+                  { selected:
+                      @app_setting.settings[key] ||
+                      schema['default'] },
+                  { class: "select select-bordered w-full" } %>
               </div>
             <% end %>
-          <% end %>
-
-          <div class="row align-items-center mt-3">
-            <div class="col">
-              <div class="btn-list justify-content-end">
-                <%= link_to "Back", root_path, class: "btn btn-link link-secondary" %>
-                <%= form.submit 'Submit', class: "btn btn-primary" %>
-              </div>
-            </div>
           </div>
+
         <% end %>
-      </div>
+
+        <div class="flex justify-end gap-3 mt-6
+                    pt-6 border-t border-base-300">
+          <%= link_to "Cancel", root_path,
+            class: "btn btn-ghost" %>
+          <%= form.submit "Save settings",
+            class: "btn btn-primary" %>
+        </div>
+
+      <% end %>
     </div>
   </div>
 </div>
