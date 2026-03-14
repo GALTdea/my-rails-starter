@@ -6,7 +6,8 @@ puts "Seeding database..."
 
 # Default admin user
 admin = User.find_or_create_by!(email: "admin@example.com") do |u|
-  u.name     = "Admin User"
+  u.first_name = "Admin"
+  u.last_name  = "User"
   u.password = "password123"
   u.password_confirmation = "password123"
   u.admin    = true
@@ -15,7 +16,8 @@ puts "  admin user: #{admin.email}"
 
 # Default regular user
 user = User.find_or_create_by!(email: "user@example.com") do |u|
-  u.name     = "Regular User"
+  u.first_name = "Regular"
+  u.last_name  = "User"
   u.password = "password123"
   u.password_confirmation = "password123"
   u.admin    = false
@@ -30,6 +32,7 @@ if Space.respond_to?(:find_or_create_by!)
   puts "  space: #{space.name}"
 end
 
+puts ""
 puts "Done! Seed data loaded."
 puts ""
 puts "Login credentials:"
