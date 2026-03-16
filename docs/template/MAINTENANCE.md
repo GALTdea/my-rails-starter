@@ -153,6 +153,8 @@ These views remain in Bootstrap; rebuild when needed per app, following docs/CON
 - [ ] `bundle exec annotate --models` run
 - [ ] GitHub Actions CI workflow
 - [ ] docs/template/UPGRADING.md
+- [ ] Replace annotate gem with annotaterb (annotate 2.6.5 is incompatible with Ruby 4.0.1
+      — File.exists? removed. annotaterb is the maintained fork.)
 
 ---
 

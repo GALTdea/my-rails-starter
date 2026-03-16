@@ -23,3 +23,16 @@ Visit http://localhost:3000
 
   bundle exec rspec        # 80 examples, 0 failures
   bundle exec rubocop      # 0 offenses
+
+## Credentials
+
+Rails 8 uses encrypted credentials — no .env file needed.
+
+To view or edit credentials:
+
+  bin/rails credentials:edit
+
+The master key is in config/master.key (gitignored).
+Never commit config/master.key.
+When deploying, set the RAILS_MASTER_KEY environment
+variable in your hosting platform (e.g. Hatchbox).
