@@ -144,21 +144,23 @@ These views remain in Bootstrap; rebuild when needed per app, following docs/CON
 
 ## Planned improvements (next tasks)
 
-- [x] Devise request specs added
-    (sessions, registrations, passwords,
-    protected routes)
-- [ ] ApplicationPolicy default defined (deny by default for SaaS)
-- [ ] Flash messages verified in browser for all Devise actions
-- [ ] FactoryBot factories completed (User, Space, Role, Plan, Subscription)
-- [ ] .env.example added
-- [ ] Mailer defaults verified in config/environments/development.rb
-- [ ] `bundle exec annotate --models` run
+- [x] Mailer defaults configured
+      (letter_opener, default_url_options,
+      perform_deliveries in development.rb)
+- [x] FactoryBot factories complete
+      (User, Space, Role, UserRole, Plan, Subscription
+      — all verified against schema)
+- [x] annotaterb replacing annotate
+      (annotate 2.6.5 incompatible with Ruby 4.0.1)
+- [x] Flash messages audited — all 3 layouts correct
+- [ ] ApplicationPolicy default defined
+      (deny by default for SaaS)
 - [ ] GitHub Actions CI workflow
+      (.github/workflows/ci.yml — see How to work
+      on the template for the workflow structure)
 - [ ] docs/template/UPGRADING.md
-- [x] Replaced annotate with annotaterb
-      (annotate 2.6.5 incompatible with Ruby 4.0.1
-      — File.exists? removed. annotaterb is the
-      maintained fork, fully compatible.)
+- [ ] docs/modules/ content written
+      (billing, api, file_uploads, multitenancy)
 
 ---
 
@@ -198,6 +200,13 @@ These live in docs/modules/ — install per app:
 - **v1.1.1** — Fix assets.rb, sync docs to current stack
 - **v1.2.0** — Docs reorganization
 - **v1.2.1** — bin/setup, bin/rename, seeds, README
+ - **v1.2.2** — Add MAINTENANCE.md, complete 
+   template docs
+ - **v1.2.3** — Write ARCHITECTURE.md
+ - **v1.2.4** — Replace annotate with annotaterb,
+   mailer config, factory audit
+ - **v1.2.5** — Devise request specs
+   (102 examples, 0 failures)
 
 ---
 

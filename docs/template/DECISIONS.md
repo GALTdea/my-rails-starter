@@ -33,35 +33,6 @@ These were Bootstrap/Tabler theming helpers. Kept multi_tenant_mode? and show_la
 ## 2026-03-12 — friendly_id reserved_words not configurable globally in v5.x
 FriendlyId 5.x does not support config.reserved_words= globally. Reserved words must be set per-model if needed. Global initializer kept as documentation only.
 
----
-
-This file is invaluable six months later when you've forgotten why something is the way it is — and it's invaluable to AI agents that would otherwise make suggestions that contradict your deliberate choices.
-
----
-
-## The `.cursorrules` File
-
-This lives at the project root, not in `docs/`. Cursor reads it automatically at the start of every session without you pasting anything. Keep it short — it's a quick-load file, not a full reference:
-```
-This is a personal Ruby on Rails 8.1 starter template.
-Read docs/AGENTS.md before making any changes.
-
-Stack: Rails 8.1, Ruby 4.0.1, Hotwire, Tailwind CSS, daisyUI, 
-Devise, Pundit, Solid Queue, SQLite, Kamal, RSpec
-
-NEVER generate: Bootstrap classes, Sidekiq, Redis, rails_admin, 
-kaminari, custom CSS, service objects for single-use logic
-
-UI rule: daisyUI semantic classes as base + Tailwind utilities. 
-No exceptions.
-
-Auth: Devise. Authorization: Pundit — always call authorize in 
-every controller action.
-
-When unsure: read docs/CONVENTIONS.md before generating code.
-Full context: docs/AGENTS.md, docs/ARCHITECTURE.md
-```
-
 ## 2026-03-13 — Upgraded to Tailwind CSS 4 + daisyUI 5
 tailwindcss-rails 4.4.0, tailwindcss v4.2.0, daisyUI 5.5.19.
 Entry point moved from app/assets/stylesheets/application.tailwind.css
@@ -71,3 +42,23 @@ Config moved from tailwind.config.js (deleted) into CSS directives:
 daisyUI loaded via npm as @plugin "daisyui".
 daisyUI 5 has ~15 class renames from v4 — views updated on-demand
 as each view is rebuilt, not preemptively.
+
+## 2026-03-13 — Replaced annotate with annotaterb
+annotate 2.6.5 uses File.exists? which was removed
+in Ruby 4.0. annotaterb is the maintained fork,
+API-compatible, fully supports Ruby 4.0.1.
+
+## 2026-03-13 — Devise paranoid mode confirmed
+config.paranoid = true is set in devise.rb.
+Password reset does not reveal whether an email
+exists in the database. Specs reflect this —
+both known and unknown emails assert no observable
+email delivery change.
+
+## 2026-03-13 — Chose not to add .env.example
+Rails 8 uses config/credentials.yml.enc for secrets.
+A .env.example file would imply a dotenv workflow
+that does not exist in this app. Credentials are
+managed via bin/rails credentials:edit.
+RAILS_MASTER_KEY is set in the hosting platform
+(e.g. Hatchbox) for production.

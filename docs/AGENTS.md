@@ -74,7 +74,9 @@ UI patterns and daisyUI 5 class reference.
 - docs/template/ — template build history (ignore for app dev)
 
 ## Current status
-- RSpec: 80 examples, 0 failures
-- RuboCop: 104 files, 0 offenses
+- RSpec: 102 examples, 0 failures
+- RuboCop: 108 files, 0 offenses
 - All layouts rebuilt in Tailwind + daisyUI 5
 - Turbo Drive enabled
+- Devise request specs complete
+- All models annotated (annotaterb)

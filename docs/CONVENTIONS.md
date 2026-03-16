@@ -58,13 +58,46 @@ Use the shared partial for consistency:
 ### Forms
 Always use Rails form helpers (form_with).
 Never write raw HTML form tags.
-Input pattern:
-  <div class="form-control">
-    label with class="label" > span.label-text
-    input with class="input input-bordered w-full"
-  </div>
-Select pattern: class="select select-bordered w-full"
-Submit: class="btn btn-primary"
+
+Field pattern (daisyUI 5):
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend">Section title</legend>
+    <label class="label" for="field_id">Label text</label>
+    <input id="field_id" class="input w-full"
+           placeholder="..." />
+  </fieldset>
+
+Text input:    class="input w-full"
+Select:        class="select w-full"
+Textarea:      class="textarea w-full"
+Submit button: class="btn btn-primary"
+Cancel button: class="btn btn-ghost"
+
+Full Rails example:
+  <%= form_with model: @record do |f| %>
+    <fieldset class="fieldset">
+      <legend class="fieldset-legend">Details</legend>
+
+      <label class="label" for="record_name">Name</label>
+      <%= f.text_field :name,
+            class: "input w-full",
+            id: "record_name" %>
+
+      <label class="label" for="record_status">
+        Status
+      </label>
+      <%= f.select :status, status_options,
+            {},
+            class: "select w-full",
+            id: "record_status" %>
+    </fieldset>
+
+    <div class="flex gap-2 mt-4">
+      <%= f.submit "Save", class: "btn btn-primary" %>
+      <%= link_to "Cancel", back_path,
+            class: "btn btn-ghost" %>
+    </div>
+  <% end %>
 
 ## daisyUI 5 Class Migration Reference
 
