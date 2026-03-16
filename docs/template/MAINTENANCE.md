@@ -144,7 +144,9 @@ These views remain in Bootstrap; rebuild when needed per app, following docs/CON
 
 ## Planned improvements (next tasks)
 
-- [ ] Devise request specs (login, logout, password reset, invitation)
+- [x] Devise request specs added
+    (sessions, registrations, passwords,
+    protected routes)
 - [ ] ApplicationPolicy default defined (deny by default for SaaS)
 - [ ] Flash messages verified in browser for all Devise actions
 - [ ] FactoryBot factories completed (User, Space, Role, Plan, Subscription)
