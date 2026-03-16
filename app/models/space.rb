@@ -4,12 +4,9 @@
 #
 # Table name: spaces
 #
-#  id         :bigint           not null, primary key
+#  id         :integer          not null, primary key
 #  name       :string
-#  phone      :string
-#  email      :string
-#  status     :integer
-#  address    :text
+#  status     :integer          default("active")
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

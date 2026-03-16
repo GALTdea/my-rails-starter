@@ -75,7 +75,7 @@ group :development, :test do
   gem "letter_opener"
 
   # Annotate models, routes, and components [https://github.com/ctran/annotate_models]
-  gem "annotate"
+  gem "annotaterb"
 
   # Use RSpec for testing [https://github.com/rspec/rspec-rails]
   gem "rspec-rails"

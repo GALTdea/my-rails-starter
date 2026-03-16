@@ -4,10 +4,15 @@
 #
 # Table name: user_roles
 #
-#  id       :bigint           not null, primary key
-#  role_id  :bigint           not null
-#  space_id :bigint           not null
-#  user_id  :bigint           not null
+#  id       :integer          not null, primary key
+#  role_id  :integer          not null
+#  space_id :integer          not null
+#  user_id  :integer          not null
+#
+# Indexes
+#
+#  index_user_roles_on_role_id               (role_id)
+#  index_user_roles_on_user_id_and_space_id  (user_id,space_id) UNIQUE
 #
 class UserRole < ApplicationRecord
   belongs_to :user

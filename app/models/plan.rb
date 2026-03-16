@@ -2,9 +2,9 @@
 #
 # Table name: plans
 #
-#  id          :bigint           not null, primary key
+#  id          :integer          not null, primary key
 #  currency    :string           not null
-#  description :json
+#  description :string
 #  duration    :string           not null
 #  name        :string           not null
 #  price       :float            not null
